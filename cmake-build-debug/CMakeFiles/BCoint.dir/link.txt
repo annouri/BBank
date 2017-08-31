@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libBCoint.a  CMakeFiles/BCoint.dir/library.c.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libBCoint.a

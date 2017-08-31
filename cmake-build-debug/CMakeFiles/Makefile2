@@ -54,45 +54,45 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ilias/CLionProjects/BCoint
+CMAKE_SOURCE_DIR = /Users/ilias/CLionProjects/BBank
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ilias/CLionProjects/BCoint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ilias/CLionProjects/BBank/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/BCoint.dir
+# Target rules for target CMakeFiles/BBank.dir
 
 # All Build rule for target.
-CMakeFiles/BCoint.dir/all:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/depend
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BCoint"
-.PHONY : CMakeFiles/BCoint.dir/all
+CMakeFiles/BBank.dir/all:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/depend
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BBank"
+.PHONY : CMakeFiles/BBank.dir/all
 
 # Include target in all.
-all: CMakeFiles/BCoint.dir/all
+all: CMakeFiles/BBank.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BCoint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BCoint.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/BCoint.dir/rule
+CMakeFiles/BBank.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BBank.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/BBank.dir/rule
 
 # Convenience name for target.
-BCoint: CMakeFiles/BCoint.dir/rule
+BBank: CMakeFiles/BBank.dir/rule
 
-.PHONY : BCoint
-
-# clean rule for target.
-CMakeFiles/BCoint.dir/clean:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/clean
-.PHONY : CMakeFiles/BCoint.dir/clean
+.PHONY : BBank
 
 # clean rule for target.
-clean: CMakeFiles/BCoint.dir/clean
+CMakeFiles/BBank.dir/clean:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/clean
+.PHONY : CMakeFiles/BBank.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/BBank.dir/clean
 
 .PHONY : clean
 

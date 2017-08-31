@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ilias/CLionProjects/BCoint
+CMAKE_SOURCE_DIR = /Users/ilias/CLionProjects/BBank
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ilias/CLionProjects/BCoint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ilias/CLionProjects/BBank/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles /Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles /Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BCoint/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ilias/CLionProjects/BBank/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BCoint
+# Target rules for targets named BBank
 
 # Build rule for target.
-BCoint: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BCoint
-.PHONY : BCoint
+BBank: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BBank
+.PHONY : BBank
 
 # fast build rule for target.
-BCoint/fast:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/build
-.PHONY : BCoint/fast
+BBank/fast:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/build
+.PHONY : BBank/fast
 
-library.o: library.c.o
+main.o: main.c.o
 
-.PHONY : library.o
+.PHONY : main.o
 
 # target to build an object file
-library.c.o:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/library.c.o
-.PHONY : library.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/main.c.o
+.PHONY : main.c.o
 
-library.i: library.c.i
+main.i: main.c.i
 
-.PHONY : library.i
+.PHONY : main.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/library.c.i
-.PHONY : library.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/main.c.i
+.PHONY : main.c.i
 
-library.s: library.c.s
+main.s: main.c.s
 
-.PHONY : library.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) -f CMakeFiles/BCoint.dir/build.make CMakeFiles/BCoint.dir/library.c.s
-.PHONY : library.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/BBank.dir/build.make CMakeFiles/BBank.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... BCoint"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... BBank"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
