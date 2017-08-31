@@ -10,11 +10,10 @@ typedef struct User{
     struct User *next_user;
 }User;
 //Define a account structure
-typedef struct Account{
+typedef struct Transaction{
     char  Account_CIN_user[10];
     float Account_transaction;
-    char  Account_status[10];
-}Account;
+}Transaction;
 
 //Users Management : Functions Prototypes
 //initialising User
@@ -28,18 +27,14 @@ void show_user(User *list_users,char CIN);
 
 //Account Management : Functions Prototypes
 //initialising Account
-User *initialise_user();
+Transaction *initialise_transaction();
 //Add node to list
-User *add_user(User *list_user,User *user);
+Transaction *add_transaction(Transaction *list_transaction,Transaction *transaction);
 //Show all users
-void show_all_users(User *list_users);
+void show_all_transaction(Transaction *list_transaction);
 //Show user by CIN
-void show_user(User *list_users,char CIN);
+void show_all_user_transaction(Transaction *list_transaction,char CIN);
 
-Account *add_account(Account *list_account,Account *account);
-
-Account *initialise_account();
-//Get user by
 void hello(void) {
 
 }
