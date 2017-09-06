@@ -9,4 +9,10 @@
 /Users/ilias/CLionProjects/BBank/main.c
 stdio.h
 -
+stdlib.h
+-
+string.h
+-
+time.h
+-
 
