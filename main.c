@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <termios.h>
+//Colors will be in use
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
 #define RED     "\033[31m"      /* Red */
@@ -19,7 +21,8 @@
 #define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
 #define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
-//Define a user structure
+static struct termios old, new;
+//USER structure
 typedef struct User{
     char CIN_user[10];
     char User_first_name[10];
@@ -28,7 +31,7 @@ typedef struct User{
     char User_type[30];
     struct User *next_user;
 }User;
-//Define a account structure
+//TRANSACTION structure
 typedef struct Transaction{
     char From[10];
     char To[10];
@@ -36,12 +39,7 @@ typedef struct Transaction{
     struct Transaction *next_transaction;
 }Transaction;
 
-//View
-void view_login();
-void view_user_menu();
-
-
-//Users Management : Functions Prototypes
+//USER Management
     //initialising User
     User *initialise_user();
     //Add node to list
@@ -86,15 +84,21 @@ void main_app();
 User *athen(User *list_users,char *cin,char *password);
 User *clone_user(User *user);
 void view_admin_menu();
-//CRYPTIN
+
+//DATA Encryption
 int  CryptFile(char *rec,char *des);
 int  deCryptFile(char *rec,char *des);
 char * decrypte(char *clair);
 char * crypting(char *clair);
+
+//Views
+void view_login();
+void view_user_menu();
 int main() {
     main_app();
 return 0;
 }
+
 void main_app(){
     User *list_user=initialise_user();
     list_user=Load_users_db();
@@ -102,6 +106,7 @@ void main_app(){
     int ch;
     scanf("%d",&ch);
     if(ch==1){
+        system("clear");
         User *user=initialise_user();
 
         user=athentification(list_user);
@@ -138,6 +143,7 @@ void main_app(){
             }
         }
         else if(strcmp(user->User_type,"admin\n")==0){
+            system("clear");
             Transaction *list_transactions=initialise_transaction();
             list_transactions=Load_transactions_db();
             int choix=-1;
@@ -340,11 +346,11 @@ User *athen(User *list_users,char *cin,char *password){
     return NULL;
 }
 User *athentification(User *list_user){
-    printf("\nLogin information\n");
-    printf("CIN%-20s",":");
+    printf("\nLogin Information\n");
+    printf(BLUE"%-17sCIN%-10s"RESET,"",":");
     char cin[30];
     scanf("%s",cin);
-    printf("PASSWORD%-15s",":");
+    printf(BLUE"%-17sPASSWORD%-5s"RESET,"",":");
     char passord[30];
     scanf("%s",passord);
     User *user=initialise_user();
